@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: humbledaisy_website_production
-  username: humbledaisy_website
+  username: deployer
   password: <%= ENV['HUMBLEDAISY_WEBSITE_DATABASE_PASSWORD'] %>
