@@ -1,0 +1,18 @@
+%section.app-section.bg-faded
+  .space-90
+  .container
+    .row.align-items-center
+      .col-md-6.margin-b-30
+        / 16:9 aspect ratio
+        .embed-responsive.embed-responsive-16by9
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/8zxj-6smeVA", :width => "854"}
+      .col-md-5.offset-md-1
+        %h3 Download our mobile app.
+        %p.margin-b-20
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus magna a lacinia tempor. Fusce et turpis posuere, imperdiet orci et, tempus ex. Nunc vitae pellentesque ipsum. Quisque id magna a nisl vestibulum ullamcorper.
+        .app-buttons
+          %a{:href => "#"}
+            %img{:alt => "", :src => "assets/images/app-store.png"}/
+          %a{:href => "#"}
+            %img{:alt => "", :src => "assets/images/play-store.png"}/
+  .space-60

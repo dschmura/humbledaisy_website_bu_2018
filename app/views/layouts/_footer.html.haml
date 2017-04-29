@@ -1,0 +1,56 @@
+
+%footer.footer
+  .space-50
+  .container
+    .row.vertical-align-child
+      .col-md-3.margin-b-30
+        .margin-b-20
+          = image_tag('HumbleDaisy_Logo.png', class: 'logo-default header-logo')
+        %p
+          Humble Daisy in a solution development company located in Ann Arbor, MI
+      .col-md-2.margin-b-30
+        %ul.list-unstyled
+          %li
+            %a{:href => "#"} About
+          -# %li
+          -#   %a{:href => "#"} Career
+          -# %li
+          -#   %a{:href => "#"} Terms
+          %li
+            = link_to "Privacy Policy", pages_privacy_path
+      -# .col-md-2.margin-b-30
+      -#   %ul.list-unstyled
+      -#     %li
+      -#       %a{:href => "#"} Blog
+      -#     %li
+      -#       %a{:href => "#"} Press Kit
+      -#     %li
+      -#       %a{:href => "#"} Support
+      -#     %li
+      -#       %a{:href => "#"} Contact
+      .col-md-5.margin-b-30
+        %ul.list-inline.social
+          -# %li.list-inline-item
+          -#   %a{:href => "#"}
+          -#     %i.ion-social-facebook
+          %li.list-inline-item
+            %a{:href => "#"}
+              %i.fa.fa-twitter
+          -# %li.list-inline-item
+          -#   %a{:href => "#"}
+          -#     %i.ion-social-googleplus
+          %li.list-inline-item
+            %a{:href => "http://lnkd.in/VuU9xY"}
+              %i.fa.fa-linkedin
+          %li.list-inline-item
+            = mail_to("dschmura@humbledaisy.com", "", subject: "ManonaM", encode: :javascript, class: "fa fa-envelope fa-3x wow bounceIn connect_icons", "data-original-title" => "Send me an email, if you must.", rel: :tooltip, "data-placement" => :bottom)
+          %li.list-inline-item
+            %a{:href => "#"}
+              %i.ion-social-youtube
+        %h4 Subscribe to newsletter
+        %form.signup-form.navbar-form.margin-b-20
+          .form-group
+            %input.form-control{:placeholder => "Enter your email address", :type => "text"}/
+          %button.btn.btn-cta.btn-primary.btn-lg{:type => "submit"} Subscribe
+        %span © Copyright 2016 - 2020
+  .space-20
