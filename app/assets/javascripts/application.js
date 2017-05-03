@@ -11,20 +11,20 @@
 // about supported directives.
 //
 //= require jquery2
+//= require plugins/plugins
+//= require template-custom
 //= require tether
 //= require bootstrap
 //= require rails-ujs
 //= require turbolinks
-//= require plugins/plugins
-//= require template-custom
+
 
 
 $(document).on('turbolinks:load', function() {
   var active_elements = $(".navbar-collapse ul li a");
   setActiveLink(active_elements);
-});
 
-function setActiveLink(active_elements) {
+  function setActiveLink(active_elements) {
   var path = window.location.pathname;
   path = path.replace(/\/$/, "");
   console.log(active_elements)
@@ -36,7 +36,10 @@ function setActiveLink(active_elements) {
     }
   });
 }
+});
 
-$(function () {
+
+$(document).on('turbolinks:load', function() {
   $('[data-toggle="tooltip"]').tooltip()
+  $('.dropdown-toggle').dropdown()
 })

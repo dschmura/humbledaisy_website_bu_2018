@@ -1,5 +1,5 @@
 var $ = $.noConflict();
-$(function () {
+$(document).on('turbolinks:load', function() {
     "use strict";
 
     if ($(".navbar").width() > 1007)
@@ -49,7 +49,7 @@ $(function () {
         }
     });
     //smooth scroll
-    $(function () {
+    $(document).on('turbolinks:load', function() {
         $('.scroll-to a[href*="#"]:not([href="#"])').on("click", function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
@@ -87,7 +87,7 @@ $(function () {
         });
     });
     //smooth scroll
-    $(function () {
+    $(document).on('turbolinks:load', function() {
         $('.scroll-to a[href*="#"]:not([href="#"])').on("click",function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
