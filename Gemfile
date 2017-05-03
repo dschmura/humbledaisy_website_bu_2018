@@ -57,7 +57,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml-rails'
 gem 'normalize-rails'
-gem 'font-awesome-rails'
+gem 'font-awesome-rails', '~> 4.7.0'
 group :development, :test do
   gem 'rspec-rails', '~>3.5.0'
   gem 'factory_girl_rails'
