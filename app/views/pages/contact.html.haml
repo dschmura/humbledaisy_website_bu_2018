@@ -1,42 +1,41 @@
-
-
-.card-group
-  .card
-    %img.card-img-top{:alt => "Card image cap", :src => "/images/pathToYourImage.png"}/
-    .card-block
-      %h4.card-title Humble Daisy, Inc
-      %p.card-text
-        %br 1342 Arella Blvd.
-        %br Ann Arbor, MI 48103
-        %br
-          (734) 864-1232 -- Phone
-
-        %p
-          For general inquiries contact
+.container#contact
+  .card-group
+    .card
+      %img.card-img-top{:alt => "Card image cap", :src => "#{image_path('img/avtar-3.jpg')}"}/
+      .card-block
+        %h4.card-title Humble Daisy, Inc
+        %p.card-text
+          %br 1342 Arella Blvd.
+          %br Ann Arbor, MI 48103
           %br
-            <a href="mailto:humbledaisy@humbledaisy.com" target="_blank">humbledaisy@humbledaisy.com</a>
-          %a.btn.btn-primary{:href => "#"} Go somewhere
+            (734) 864-1232 -- Phone
+
+          %p
+            For general inquiries contact
+            %br
+              <a href="mailto:humbledaisy@humbledaisy.com" target="_blank">humbledaisy@humbledaisy.com</a>
+            -# %a.btn.btn-primary{:href => "#"} Go somewhere
 
 
-  .card
-    %img.card-img-top{:alt => "Card image cap", :src => "/images/pathToYourImage.png"}/
-    .card-block
-      %h4.card-title David Chmura
-      %p.card-text
-        %h4 Chief Instigator
-        <a href="mailto:dschmura@humbledaisy.com" target="_blank">dschmura@humbledaisy.com</a>
+    .card
+      %img.card-img-top{:alt => "Card image cap", :src => "#{image_path('img/avtar-3.jpg')}"}/
+      .card-block
+        %h4.card-title David Chmura
+        %p.card-text
+          %h4 Chief Instigator
+          <a href="mailto:dschmura@humbledaisy.com" target="_blank">dschmura@humbledaisy.com</a>
 
-      %br
-      (734) 864-1232 -- Phone
-      %a.btn.btn-primary{:href => "#"} Go somewhere
+        %br
+        (734) 864-1232 -- Phone
+        -# %a.btn.btn-primary{:href => "#"} Go somewhere
 
-  .card
-    %img.card-img-top{:alt => "Card image cap", :src => "/images/pathToYourImage.png"}/
-    .card-block
-      %h4.card-title Michael Chmura
-      %p.card-text
-        %h4 Usability Consultant
-        <a href="mailto:mbchmura@humbledaisy.com" target="_blank">mbchmura@humbledaisy.com</a>
+    .card
+      %img.card-img-top{:alt => "Card image cap", :src => "#{image_path('img/avtar-3.jpg')}"}
+      .card-block
+        %h4.card-title Michael Chmura
+        %p.card-text
+          %h4 Usability Consultant
+          <a href="mailto:mbchmura@humbledaisy.com" target="_blank">mbchmura@humbledaisy.com</a>
 
-        %br (734) 864-1232 -- Phone
-      %a.btn.btn-primary{:href => "#"} Go somewhere
+          %br (734) 864-1232 -- Phone
+        -# %a.btn.btn-primary{:href => "#"} Go somewhere

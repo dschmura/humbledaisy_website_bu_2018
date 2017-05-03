@@ -14,7 +14,7 @@ $(document).on('turbolinks:load', function() {
 // site preloader
     //preloader
     $(window).preloader({
-        delay: 500
+        // delay: 500
     });
 
     $(".search-nav a,.close-search").on("click", function () {
