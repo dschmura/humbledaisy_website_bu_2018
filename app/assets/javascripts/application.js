@@ -12,6 +12,7 @@
 //
 //= require jquery2
 //= require plugins/plugins
+//= require plugins/jquery.gmaps.min
 //= require template-custom
 //= require tether
 //= require bootstrap
