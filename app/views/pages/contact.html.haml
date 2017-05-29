@@ -1,7 +1,7 @@
 .container#contact
   .card-group
     .card
-      %img.card-img-top{:alt => "Card image cap", :src => "#{image_path('img/avtar-3.jpg')}"}/
+      -# %img.card-img-top{:alt => "Card image cap", :src => "#{image_path('img/avtar-3.jpg')}"}/
       .card-block
         %h4.card-title Humble Daisy, Inc
         %p.card-text
@@ -18,7 +18,7 @@
 
 
     .card
-      %img.card-img-top{:alt => "Card image cap", :src => "#{image_path('img/avtar-3.jpg')}"}/
+      -# %img.card-img-top{:alt => "Card image cap", :src => "#{image_path('img/avtar-3.jpg')}"}/
       .card-block
         %h4.card-title David Chmura
         %p.card-text
@@ -30,7 +30,7 @@
         -# %a.btn.btn-primary{:href => "#"} Go somewhere
 
     .card
-      %img.card-img-top{:alt => "Card image cap", :src => "#{image_path('img/avtar-3.jpg')}"}
+      -# %img.card-img-top{:alt => "Card image cap", :src => "#{image_path('img/avtar-3.jpg')}"}
       .card-block
         %h4.card-title Michael Chmura
         %p.card-text
@@ -39,3 +39,87 @@
 
           %br (734) 864-1232 -- Phone
         -# %a.btn.btn-primary{:href => "#"} Go somewhere
+
+
+.containers
+  .space-90
+  .row
+    .col-lg-5.col-md-6.offset-1.margin-b-40
+      %h3.margin-b-30 Feel free to contact us!
+      = form_for @message, url: create_message_url do |f|
+        = notice
+        = @message.errors.full_messages.join(', ')
+        .col-sm-12.margin-b-20
+          = f.text_field :name, placeholder: 'Full Name...', class: 'form-control'
+        .col-sm-12.margin-b-20
+          = f.email_field :email, placeholder: 'Email Address...', class: 'form-control'
+        .col-sm-12.margin-b-20
+          = f.text_area :body, placeholder: 'Message...', class: 'form-control', rows: 5
+        .row
+          .col-sm-12.text-right
+            = f.submit 'Send Message', class: ' btn btn-primary btn-rounded'
+      -# %form{:action => "#", :method => "post"}
+      -# .row
+      -#   .col-sm-12
+      -#     .row
+      -#       .col-sm-12.margin-b-20
+      -#         %input.form-control{:name => "name", :placeholder => "Full Name....", :type => "text"}/
+      -#       .col-sm-12.margin-b-20
+      -#         %input.form-control{:name => "email", :placeholder => "Email Address....", :type => "text"}/
+      -#   .col-sm-12.margin-b-20
+      -#     %textarea.form-control{:name => "message", :placeholder => "Message....", :rows => "5"}
+      -#   .row
+      -#     .col-sm-12.text-center
+      -#       .data-status
+      -#       / data submit status
+      -#   .row
+      -#     .col-sm-12.text-right
+      -#       %button.btn.btn-primary.btn-rounded{:name => "submit", :type => "submit"} send message
+    .col-lg-5.col-md-4.margin-b-40
+      %h4 Address
+      %p.margin-b-0
+        1342 Arella Boulevard,
+        %br
+          Ann Arbor, MI
+          %br
+            48103
+          %hr
+            %h4 Phone
+            %p.margin-b-0
+              734-864-1232
+              %hr
+                %h4 Email  support center
+                %p.margin-b-0
+                  support@humbledaisy.com
+
+                .space-50
+  / Google Maps
+  .google-map-container.margin-b-60
+    #googlemaps{:style => "width: 100%;height: 400px;"}
+
+
+      %script{:src => "https://maps.google.com/maps/api/js?key=AIzaSyBENlIxSKmTEK2fJeKjKo_JMxC9jE2IkL4"}
+
+      :javascript
+        (function ($) {
+            $(document).on('turbolinks:load', function() {
+
+                $('#googlemaps').gMap({
+                    maptype: 'ROADMAP',
+                    scrollwheel: false,
+                    zoom: 13,
+                    markers: [
+                        {
+                            address: 'Ann Arbor, MI', // Your Adress Here
+                            html: 'We live and work in Ann Arbor, MI',
+                            popup: false,
+                            icon: {
+                                image: "assets/images/marker.png",
+                                iconsize: [48, 48],
+                                iconanchor: [48, 48]
+                            }
+                        }
+                    ]
+                });
+            });
+        })(this.jQuery);

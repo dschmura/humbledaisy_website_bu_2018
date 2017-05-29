@@ -21,6 +21,18 @@ module HumbledaisyWebsite
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
+    config.action_mailer.delivery_method = :smtp
+
+    config.action_mailer.smtp_settings = {
+      address:              ENV['HUMBLEDAISY_WEBSITE_EMAIL_SERVER'],
+      domain:               ENV['HUMBLEDAISY_WEBSITE_EMAIL_DOMAIN'],
+      user_name:            ENV['HUMBLEDAISY_WEBSITE_EMAIL_USERNAME'],
+      password:             ENV['HUMBLEDAISY_WEBSITE_EMAIL_PASSWORD'],
+      authentication:       :login,
+      enable_starttls_auto: 'true',
+      port:                 '587'
+    }
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
