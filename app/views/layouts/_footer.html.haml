@@ -1,5 +1,5 @@
 
-%footer.footer
+%footer.footer.footer_mst3k
   .space-50
   .container
     .row.vertical-align-child
@@ -12,46 +12,21 @@
         %ul.list-unstyled
           %li
             = link_to('About', about_path)
-
-          -# %li
-          -#   %a{:href => "#"} Career
-          -# %li
-          -#   %a{:href => "#"} Terms
           %li
             = link_to "Privacy Policy", privacy_path
-      -# .col-md-2.margin-b-30
-      -#   %ul.list-unstyled
-      -#     %li
-      -#       %a{:href => "#"} Blog
-      -#     %li
-      -#       %a{:href => "#"} Press Kit
-      -#     %li
-      -#       %a{:href => "#"} Support
-      -#     %li
-      -#       %a{:href => "#"} Contact
+
       .col-md-5.margin-b-30
         %ul.list-inline.social
-          -# %li.list-inline-item
-          -#   %a{:href => "#"}
-          -#     %i.ion-social-facebook
+
           %li.list-inline-item
-            %a{:href => "#"}
+
+            %a{:href => "https://twitter.com/humbledaisy",  target: '_blank', alt: 'Follow us on twitter'}
               %i.fa.fa-twitter
-          -# %li.list-inline-item
-          -#   %a{:href => "#"}
-          -#     %i.ion-social-googleplus
+
           %li.list-inline-item
-            %a{:href => "http://lnkd.in/VuU9xY"}
+            %a{:href => "http://lnkd.in/VuU9xY",  target: '_blank', alt: 'Check me out on LinkedIn'}
               %i.fa.fa-linkedin
           %li.list-inline-item
             = mail_to("dschmura@humbledaisy.com", "", subject: "ManonaM", encode: :javascript, class: "fa fa-envelope fa-3x wow bounceIn connect_icons", "data-original-title" => "Send me an email, if you must.", rel: :tooltip, "data-placement" => :bottom)
-          -# %li.list-inline-item
-          -#   %a{:href => "#"}
-          -#     %i.fa.fa-youtube
-        -# %h4 Subscribe to newsletter
-        -# %form.signup-form.navbar-form.margin-b-20
-        -#   .form-group
-        -#     %input.form-control{:placeholder => "Enter your email address", :type => "text"}/
-        -#   %button.btn.btn-cta.btn-primary.btn-lg{:type => "submit"} Subscribe
-        %span © Copyright 2016 - 2020
-  .space-20
+
+      %span © Copyright 2016 - 2020
