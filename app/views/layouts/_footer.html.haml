@@ -26,7 +26,9 @@
           %li.list-inline-item
             %a{:href => "http://lnkd.in/VuU9xY",  target: '_blank', alt: 'Check me out on LinkedIn'}
               %i.fa.fa-linkedin
+          -# %li.list-inline-item
+          -#   = mail_to("dschmura@humbledaisy.com", "", subject: "ManonaM", encode: :javascript, class: "fa fa-envelope fa-3x wow bounceIn connect_icons", "data-original-title" => "Send me an email, if you must.", rel: :tooltip, "data-placement" => :bottom)
           %li.list-inline-item
-            = mail_to("dschmura@humbledaisy.com", "", subject: "ManonaM", encode: :javascript, class: "fa fa-envelope fa-3x wow bounceIn connect_icons", "data-original-title" => "Send me an email, if you must.", rel: :tooltip, "data-placement" => :bottom)
-
+            = link_to( contact_url) do
+              %i.fa.fa-envelope
       %span © Copyright 2016 - 2020
